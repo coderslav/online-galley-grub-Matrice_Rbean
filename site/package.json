@@ -1,21 +1,23 @@
 {
-  "name": "site",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "author": "Mathieu Mahé @Rbean",
-  "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "express-handlebars": "^4.0.3",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "sqlite3": "^4.2.0"
-  },
-  "devDependencies": {
-    "handlebars": "^4.5.0"
-  }
+    "name": "site",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "^5.1.3",
+        "cookie-parser": "^1.4.6",
+        "debug": "^4.3.3",
+        "express": "^4.17.2",
+        "express-handlebars": "^6.0.2",
+        "handlebars": "^4.7.7",
+        "http-error": "^0.0.6",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.15",
+        "sqlite3": "^5.0.2"
+    }
 }
