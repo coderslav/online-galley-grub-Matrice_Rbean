@@ -1,14 +1,30 @@
-INDEX OF ALL FOODS
-
-{{!
-    For each food listed, you must generate a link of the following type:
-    <a href='/foods/3'>Triple Krabby Patty</a>
-}}
-
-
-{{!
-    The two lines below are just there to help you see what's inside the variables when they are sent to the template
-}}
-
-{{{json categories}}}
-{{{json foods}}}
+<figure class='text-center'>
+    <blockquote class='blockquote'>
+        <h1>Our Menu</h1>
+    </blockquote>
+</figure>
+{{getCategories categories}}
+<div class='container'>
+    <div class='row'>
+        {{#each foods}}
+            {{#each this}}
+                <div class='col-sm'>
+                    <div class='card' style='width: 18rem;'>
+                        {{#if this.image_path}}
+                            <img class='card-img-top' src='/images/{{this.image_path}}' alt={{this.image_path}} />
+                        {{else}}
+                            <img class='card-img-top' src='https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg' alt={{this.image_path}} />
+                        {{/if}}
+                        <div class='card-body'>
+                            <h4 class='card-text'>{{this.name}}</h4>
+                            <h6 class='card-category'>{{categoryNameGetter this.category_id}}</h6>
+                            <br />
+                            <h6 class='card-price'>{{this.price}} $</h6>
+                            <button type='button' class='btn btn-primary see-food'><a class='nav-link' href='foods/{{this.id}}'>SEE FOOD</a></button>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        {{/each}}
+    </div>
+</div>

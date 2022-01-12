@@ -1,0 +1,34 @@
+body {
+    background-color: aqua;
+}
+.nav-link {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1.5rem 2rem;
+}
+.btn.see-food:hover,
+.nav-link:hover {
+    color: aqua;
+}
+.btn {
+    margin: 1rem;
+    padding: 0;
+}
+.nav {
+    margin-bottom: 3rem;
+}
+.card {
+    margin: 0 auto;
+    background-color: gold;
+    margin-bottom: 3rem;
+}
+.card-body {
+    text-align: center;
+}
+.card-category {
+    color: red;
+}
+.btn.see-food .nav-link {
+    padding: 0.5rem 1rem;
+}
